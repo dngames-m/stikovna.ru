@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spucme domain</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        body {
+            font-family: 'Family Sans', serif;
+        }
+
+        .gradient-background {
+            height: 100vh;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364, #1f4037, #99f2c8);
+            background-size: 400% 400%;
+            animation: gradient 18s ease infinite;
+            display: block;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            font-family: 'Family Sans', serif;
+            background-color: white;
+        }
+
+        #gll {
+            margin: auto;
+        }
+
+        #name {
+            width: 330px;
+            height: 220px;
+            background-color: rgb(30, 40, 58);
+            margin: auto;
+            display: block;
+            border-radius: 11px;
+            transform: translateY(200px);
+        }
+
+        .ava {
+            width: 95px;
+            height: 95px;
+            margin: auto;
+            display: block;
+            border-radius: 1000%;
+            transform: translateY(-140px);
+            z-index: 3;
+        }
+
+        #av {
+            background-color: rgb(30, 40, 58);
+            width: 105px;
+            height: 105px;
+            margin: auto;
+            display: block;
+            border-radius: 1000%;
+            transform: translateY(-40px);
+            z-index: 1;
+        }
+
+        .txt {
+            color: rgb(255, 255, 255);
+            margin: auto;
+            display: block;
+            transform: translate(17px, -115px);
+            font-size: 21px;
+        }
+
+        @media (max-width: 768px) {
+            .txt {
+            color: rgb(255, 255, 255);
+            margin: auto;
+            display: block;
+            transform: translate(14px, -115px);
+            font-size: 18px;
+            }
+        }
+
+        .txt2 {
+            color: rgb(255, 255, 255);
+            margin: auto;
+            display: block;
+            transform: translate(35px, -105px);
+            font-size: 19px;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .txt2 {
+            color: rgb(255, 255, 255);
+            margin: auto;
+            display: block;
+            transform: translate(15px, -105px);
+            font-size: 19px;
+            padding: 20px;
+            }
+        }
+
+        .btn {
+            width: 330px;
+            height: 50px;
+            border-radius: 11px;
+            background-color: rgb(61, 167, 167);
+            color: white;
+            border: 0px;
+            font-size: 20px;
+            transform: translateY(-85px);
+
+        }
+        .btn:hover {
+            background-color: rgb(45, 124, 124);
+        }
+
+        #r {
+            width: 70px;
+            height: 3px;
+            background-color: rgb(61, 167, 167);
+            margin: auto;
+            display: block;
+            z-index: 4;
+            transform: translateY(-100px);
+        }
+        
+    </style>
+</head>
+<body style="position: fixed; width: 100vw; height: 110vh;">
+    <div class="gradient-background">
+        <div id="gll">
+    <div id="name">
+        <div id="av"></div>
+        <img class="ava" src="spucme.png">
+        <p class="txt">этот домен принадлежит Spucme</p>
+        <div id="r"></div>
+        <p class="txt2">связаться со мной можно в telegram, по кнопке ниже</p>
+
+        <form action="https://spucme.ru" method="get" target="_self">
+            <button class="btn">перейти в профиль</button>
+        </form>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
