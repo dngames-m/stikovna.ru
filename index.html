@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Стиковня</title>
+  <style>
+
+    html, body {
+      overflow: hidden;
+      height: 100%;
+    }
+    body {
+      background-color: rgb(240, 240, 240);
+      touch-action: none;
+      overscroll-behavior: none;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .blocks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 23px;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .block_set {
+      width: 800px;
+      border: 0px;
+      border-radius: 7.8px;
+      margin: auto;
+      transform: translateY(80px);
+      overflow: hidden;
+      position: relative;
+      background-color: rgb(200, 206, 221);
+    }
+
+    .loading-line {
+      position: absolute;
+      width: 60px;
+      height: 150%;
+      background-color: white;
+      top: -25%;
+      left: -100%;
+      opacity: 0.5;
+      animation: rcc 1.6s infinite;
+      filter: blur(20px);
+      transform: rotate(-20deg);
+    }
+
+    @keyframes rcc {
+      0% { left: -100%; }
+      100% { left: 110%; }
+    }
+
+    .block_1 { height: 80px; }
+    .block_2 { height: 160px; }
+    .block_3 { height: 270px; }
+    .block_4 { height: 130px; }
+
+    @media (max-width: 800px) {
+      .block_set {
+        width: 340px;
+        transform: translateY(0px);
+      }
+      .block_3 {
+        height: 390px;
+      }
+      .block_4 {
+        width: 0px;
+        height: 0px;
+      }
+      .ddw {
+        margin: auto;
+        transform: translate(-19px, -620px);
+      }
+    }
+
+    .ddw {
+      display: flex;
+      width: 315px;
+      height: 90px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 8px;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+      left: 20px;
+      bottom: -190px;
+      opacity: 0;
+      animation: annm 0.7s forwards;
+    }
+    @keyframes annm {
+      to {
+        opacity: 1;
+        bottom: -120px;
+      }
+    }
+
+    .loader {
+      border: 8px solid #dbdbdb;
+      border-top: 8px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      position: relative;
+      top: 20px;
+      left: -225px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .tll {
+      transform: translate(75px, 18px);
+      font-size: 17.5px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="blocks">
+    <div class="block_1 block_set">
+        <div class="loading-line"></div></div>
+    <div class="block_2 block_set">
+        <div class="loading-line"></div></div>
+    <div class="block_3 block_set">
+        <div class="loading-line"></div>
+        </div>
+    <div class="block_4 block_set">
+        <div class="loading-line"></div></div>
+  </div>
+  <div class="ddw">
+    <p class="tll">подключение к серверу DNG</p>
+    <div class="loader"></div>
+  </div>
+</body>
+</html>
